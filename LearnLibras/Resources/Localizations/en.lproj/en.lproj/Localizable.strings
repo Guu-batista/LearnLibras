@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  LearnLibras
+
+  Created by Gustavo Batista on 16/09/24.
+  
+*/
+
+
+
+/* MARK: - CameraView */
+
+"CameraView.badge.failed" = "Camera Setup Failed";
+"CameraView.badge.accessDenied" = "Camera Access Denied";
+"CameraView.badge.loading" = "Loading...";
+"CameraView.badge.success" = "Start Camera";
+
+
+/* MARK: - IntroView */
+
+"IntroView.description" = "Welcome! HandSignal is made for inform people about sign language. With this project, you can learn base informations and some basic hand signs.";
+"IntroView.navigationButton.next" = "Começar";
+
+
+
+/* MARK: - MainView */
+
+"MainView.screenSizeAlert" = "The current screen width is not enough. Please run the project on your device or another device with a larger screen.";
+
+
+
+/* MARK: - TryView */
+
+"TryView.title" = "Use Sign Language";
+"TryView.description" = "In this part, you need to hold your hand towards the camera and try to tell a word with hand signs. The word must be at least 3 letters. If possible, go to a flat and clear background.";
+"TryView.buttons.back" = "Back";
+"TryView.completed.title" = "Congrats!";
+"TryView.completed.description" = "You succeed to say a word you choose using sign language! You can keep going or continue to the next step now.";
