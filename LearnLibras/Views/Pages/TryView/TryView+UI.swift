@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// MARK: - TryView UI
 
 extension TryView {
 

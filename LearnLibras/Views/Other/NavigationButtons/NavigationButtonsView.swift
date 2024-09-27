@@ -7,18 +7,13 @@
 
 import SwiftUI
 
-// MARK: - NavigationButtonsView
-
 enum NavigationButtonsView: View {
-
-    // MARK: Cases
 
     case next(_ title: LocalizedStringKey = "NavigationButtonsView.next")
     case previus(_ title: LocalizedStringKey = "NavigationButtonsView.previus")
     case both(nextTitle: LocalizedStringKey = "NavigationButtonsView.next",
               previusTitle: LocalizedStringKey = "NavigationButtonsView.previus")
 
-    // MARK: View
 
     var body: some View {
         bodyView
@@ -56,14 +51,5 @@ enum NavigationButtonsView: View {
                    title: title,
                    systemImage: "chevron.left",
                    direction: .leftToRight)
-    }
-}
-
-// MARK: - Previews
-
-struct NavigationButtonsView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationButtonsView.both()
-            .setupPreview()
     }
 }

@@ -97,7 +97,7 @@ extension CameraManager {
 }
 
 private extension CameraManager {
-
+    
     func setupCapture() async -> Bool {
         captureSession.sessionPreset = .vga640x480
         captureSession.beginConfiguration()
@@ -109,7 +109,9 @@ private extension CameraManager {
 
         captureOutput.connection(with: .video)?.isEnabled = true
         captureOutput.alwaysDiscardsLateVideoFrames = true
-        captureOutput.connection(with: .video)?.isVideoMirrored = true
+
+        // Desative o espelhamento para a câmera do MacBook
+        captureOutput.connection(with: .video)?.isVideoMirrored = false
 
         captureSession.addOutput(captureOutput)
 
@@ -118,44 +120,24 @@ private extension CameraManager {
     }
 
     func setupInputs() async -> Bool {
-        async let frontCameraInput: AVCaptureDeviceInput? = await Task.detached {
+        // Configuração para a única câmera disponível no MacBook (geralmente frontal)
+        async let macCameraInput: AVCaptureDeviceInput? = await Task.detached {
             guard let camera: AVCaptureDevice = .default(
                 .builtInWideAngleCamera,
                 for: .video,
-                position: .front
+                position: .unspecified // Pode usar .front se quiser ser mais específico
             ) else { return nil }
 
             return try? .init(device: camera)
         }.value
 
-        async let backCameraInput: AVCaptureDeviceInput? = await Task.detached {
-            guard let camera: AVCaptureDevice = .default(
-                .builtInWideAngleCamera,
-                for: .video,
-                position: .back
-            ) else { return nil }
-
-            return try? .init(device: camera)
-        }.value
-
-        (frontCamera, backCamera) = await (frontCameraInput, backCameraInput)
-
-        switch (frontCamera, backCamera) {
-        case (.some, .some(let backCamera)):
-            currentCamera = .back
-            captureSession.addInput(backCamera)
+        if let macCameraInput = await macCameraInput {
+            currentCamera = .front // Apenas uma câmera frontal está disponível
+            captureSession.addInput(macCameraInput)
             return true
-
-        case (.some(let frontCamera), .none):
-            captureSession.addInput(frontCamera)
-            return true
-
-        case (.none, .some(let backCamera)):
-            captureSession.addInput(backCamera)
-            return true
-
-        case (.none, .none):
-            return false
         }
+
+        return false
     }
 }
+

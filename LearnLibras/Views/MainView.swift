@@ -55,14 +55,3 @@ struct MainView: View {
     }
 }
 
-// MARK: - Previews
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-            .preferredColorScheme(.dark)
-            .previewInterfaceOrientation(.landscapeRight)
-            .previewDevice("iPad Pro (11-inch) (4th generation)")
-    }
-}
-

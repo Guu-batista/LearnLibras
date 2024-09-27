@@ -7,16 +7,11 @@
 
 import SwiftUI
 
-// MARK: - NavigationButtonsView Publics
-
 extension NavigationButtonsView {}
 
-// MARK: - ButtonView
 
 extension NavigationButtonsView {
     struct ButtonView: View {
-
-        // MARK: Properties
 
         @EnvironmentObject var navigationManager: NavigationManager
         @EnvironmentObject var cameraManager: CameraManager
@@ -26,7 +21,6 @@ extension NavigationButtonsView {
         var systemImage: String
         var direction: LayoutDirection
 
-        // MARK: View
 
         var body: some View {
             Button(action: onButtonTapped) {
@@ -34,8 +28,6 @@ extension NavigationButtonsView {
                     .labelStyle(NavigationLabelStyle(imageDirection: direction))
             }
         }
-
-        // MARK: Functions
 
         func onButtonTapped() {
             guard cameraManager.runStatus != .loading else { return }

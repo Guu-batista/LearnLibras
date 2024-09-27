@@ -30,7 +30,7 @@ extension CameraView {
 
         func makeCoordinator() -> Coordinator {
             let coordinator: Coordinator = .init(handPoseDetector: handPoseDetector)
-            coordinator.startOrientationTask()
+            //coordinator.startOrientationTask()
             cameraManager.captureOutput.setSampleBufferDelegate(coordinator, queue: coordinator.queue)
             return coordinator
         }
@@ -90,22 +90,27 @@ extension CameraView.AVCaptureView {
             nsView.layer = CALayer()
             nsView.layer?.addSublayer(capturePreview)
 
+            
+            capturePreview.setAffineTransform(CGAffineTransform(scaleX: -1, y: 1))
+            
+
             self.nsView = nsView
             self.capturePreview = capturePreview
 
             return nsView
         }
 
+
         func updateFrame(with size: CGSize) {
             capturePreview?.frame.size = size
         }
 
-        func startOrientationTask() {
-            orientationTask = .init {
-                // No macOS, não há notificações de orientação como no iOS
-                // Portanto, não é necessário ajustar a orientação de vídeo aqui
-            }
-        }
+//        func startOrientationTask() {
+//            orientationTask = .init {
+//                // No macOS, não há notificações de orientação como no iOS
+//                // Portanto, não é necessário ajustar a orientação de vídeo aqui
+//            }
+//        }
 
         func stopOrientationTask() {
             orientationTask?.cancel()

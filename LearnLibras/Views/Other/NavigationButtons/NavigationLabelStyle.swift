@@ -7,16 +7,10 @@
 
 import SwiftUI
 
-// MARK: - NavigationLabelStyle
-
 struct NavigationLabelStyle: LabelStyle {
 
-    // MARK: Properties
-
     var imageDirection: LayoutDirection = .leftToRight
-
-    // MARK: View
-
+    
     func makeBody(configuration: Configuration) -> some View {
         contentView(configuration: configuration)
             .font(.custom.title2)
@@ -48,12 +42,3 @@ struct NavigationLabelStyle: LabelStyle {
     }
 }
 
-// MARK: - Previews
-
-struct NavigationLabelStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        Label("Next", systemImage: "chevron.right")
-            .labelStyle(NavigationLabelStyle(imageDirection: .rightToLeft))
-            .setupPreview()
-    }
-}

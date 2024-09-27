@@ -7,18 +7,12 @@
 
 import SwiftUI
 
-// MARK: - AnimatedGradient
-
 struct AnimatedGradient: View {
-
-    // MARK: Properties
 
     @State var secondGradientOpacity: CGFloat = 0.1
 
     var firstGradient: [Color]
     var secondGradient: [Color]
-
-    // MARK: View
 
     var body: some View {
         ZStack {
@@ -39,11 +33,7 @@ struct AnimatedGradient: View {
     }
 }
 
-// MARK: - Privates
-
 private extension AnimatedGradient {
-
-    // MARK: Functions
 
     func colorAnimation() {
         let animation: Animation = .linear(duration: 5.0)
@@ -58,8 +48,6 @@ private extension AnimatedGradient {
         }
     }
 }
-
-// MARK: - Previews
 
 struct AnimatedGradient_Previews: PreviewProvider {
     static var previews: some View {

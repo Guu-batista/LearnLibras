@@ -7,11 +7,7 @@
 
 import SwiftUI
 
-// MARK: - TryView
-
 struct TryView: View {
-
-    // MARK: Properties
 
     @State var isAnimated: Bool = false
     @State var wordValue: HandDetectorView.WordValue = .init()
@@ -26,19 +22,8 @@ struct TryView: View {
         (wordValue.collectedLetters?.count ?? 0) > 2
     }
 
-    // MARK: View
-
     var body: some View {
         bodyView
             .animate(isAnimated: $isAnimated, wait: .seconds(0.25))
-    }
-}
-
-// MARK: - Previews
-
-struct TryView_Previews: PreviewProvider {
-    static var previews: some View {
-        TryView()
-            .setupPreview()
     }
 }

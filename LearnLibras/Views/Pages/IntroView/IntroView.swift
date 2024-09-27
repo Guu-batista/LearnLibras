@@ -7,29 +7,32 @@
 
 import SwiftUI
 
-// MARK: - IntroView
-
 struct IntroView: View {
-
-    // MARK: Properties
 
     @EnvironmentObject var navigationManager: NavigationManager
     @State var isAnimated: Bool = false
 
-    // MARK: View
-
     var body: some View {
-        bodyView
-            .animation(.linear(duration: 0.75), value: isAnimated)
-            .animate(isAnimated: $isAnimated, wait: .seconds(1))
-    }
-}
-
-// MARK: - Preview
-
-struct IntroView_Previews: PreviewProvider {
-    static var previews: some View {
-        IntroView()
-            .setupPreview()
+        GeometryReader { geo in
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Image("LLlogo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: geo.size.width * (isAnimated ? 0.5 : 0.875))
+                    Spacer()
+                }
+                if isAnimated {
+                    Spacer()
+                    NavigationButtonsView
+                        .next("Começar")
+                }
+                Spacer()
+            }
+        }
+        .animation(.linear(duration: 0.75), value: isAnimated)
+        .animate(isAnimated: $isAnimated, wait: .seconds(1))
     }
 }
