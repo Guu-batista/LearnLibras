@@ -7,17 +7,9 @@
 
 import SwiftUI
 
-// MARK: - AboutSLView
-
 struct LibrasView: View {
-
-    // MARK: Properties
-
     @State var isAnimated: Bool = false
-
     let defaultAnimation: Animation = .easeIn.speed(0.5)
-
-    // MARK: View
 
     var body: some View {
             VStack {
