@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-// MARK: - HandDetectorView UI
-
 extension HandDetectorView {
 
     var overlayView: some View {
@@ -60,31 +58,4 @@ extension HandDetectorView {
 
         }
     }
-
-//    var controlButtons: some View {
-//        HStack {
-//            Button {
-//                viewModel.wordValue.collectedLetters?.removeLast()
-//            } label: {
-//                Image(systemName: "delete.left.fill")
-//            }
-//            .font(.custom.body)
-//            .padding()
-//
-//            Button {
-//                guard let word = viewModel.wordValue.collectedLetters?
-//                    .joined()
-//                    .capitalized
-//                else { return }
-//
-//                let pasteboard = NSPasteboard.general
-//                                pasteboard.clearContents()
-//                                pasteboard.setString(word, forType: .string)
-//            } label: {
-//                Image(systemName: "doc.on.doc.fill")
-//            }
-//            .font(.custom.body)
-//            .padding()
-//        }
-//    }
 }

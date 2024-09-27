@@ -7,12 +7,8 @@
 
 import Foundation
 
-// MARK: - WordValue
-
 extension HandDetectorView {
     struct WordValue {
-
-        // MARK: Properties
 
         let targetWords: [String]?
         var completedWords: [String] = .init()
@@ -32,8 +28,6 @@ extension HandDetectorView {
             }
         }
 
-        // MARK: Initializers
-
         init(targetWords: [String]? = nil) {
             self.targetWords = targetWords
 
@@ -50,11 +44,7 @@ extension HandDetectorView {
     }
 }
 
-// MARK: - WordValue Publics
-
 extension HandDetectorView.WordValue {
-
-    // MARK: Properties
 
     var isCompleted: Bool {
         completedWords == targetWords
@@ -63,8 +53,6 @@ extension HandDetectorView.WordValue {
     var currentLetter: String? {
         currentWordLetters?.first(where: { !$0.1 })?.0
     }
-
-    // MARK: Functions
 
     mutating func nextWord() {
         guard targetWords?.isEmpty == false else { return }

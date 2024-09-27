@@ -9,12 +9,14 @@ import SwiftUI
 
 enum Page: View, CaseIterable {
     
-    case intro, `try`
+    case intro, libras, `try`
 
     var body: some View {
         switch self {
         case .intro:
             IntroView()
+        case .libras:
+            LibrasView()
         case .try:
             TryView()
 

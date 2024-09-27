@@ -9,15 +9,10 @@ import SwiftUI
 
 extension Font {
 
-    // MARK: Properties
-
     static let custom: CustomFonts = .init()
 
-    // MARK: CustomFonts
 
     struct CustomFonts {
-
-        // MARK: Properties
 
         let largeTitle: Font = .system(size: 75)
         let largeTitle2: Font = .system(size: 50)

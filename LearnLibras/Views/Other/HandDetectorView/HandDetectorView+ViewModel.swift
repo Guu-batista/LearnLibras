@@ -7,12 +7,8 @@
 
 import SwiftUI
 
-// MARK: - HandDetectorView ViewModel
-
 extension HandDetectorView {
     @MainActor class ViewModel: ObservableObject {
-
-        // MARK: Properties
 
         @Published var wordValue: WordValue
         @Published private(set) var isCompleted: Bool = false
@@ -21,8 +17,6 @@ extension HandDetectorView {
         private var valueBinding: Binding<WordValue>?
 
         typealias CollectedLetters = [(letter: String, isCompleted: Bool)]
-
-        // MARK: Initializers
 
         init(wordValue: WordValue,
              valueBinding: Binding<WordValue>?) {
@@ -33,11 +27,7 @@ extension HandDetectorView {
     }
 }
 
-// MARK: - ViewModel Publics
-
 extension HandDetectorView.ViewModel {
-
-    // MARK: Functions
 
     func onAppear(handPoseDetector: HandPoseDetector) {
         valueBindingTask()
@@ -46,11 +36,7 @@ extension HandDetectorView.ViewModel {
     }
 }
 
-// MARK: - ViewModel Privates
-
 private extension HandDetectorView.ViewModel {
-
-    // MARK: Functions
 
     func getHandPosesTask(handPoseDetector: HandPoseDetector) {
         let filteredPoses = handPoseDetector.$currentPose

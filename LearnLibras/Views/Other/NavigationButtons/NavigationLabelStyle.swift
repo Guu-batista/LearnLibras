@@ -15,7 +15,6 @@ struct NavigationLabelStyle: LabelStyle {
         contentView(configuration: configuration)
             .font(.custom.title2)
             .padding()
-            //.overlay(borderView)
     }
 
     func contentView(configuration: Configuration) -> some View {

@@ -7,16 +7,10 @@
 
 import SwiftUI
 
-// MARK: - HandDetectorView
-
 struct HandDetectorView: View {
-
-    // MARK: Properties
 
     @EnvironmentObject private var handPoseDetector: HandPoseDetector
     @StateObject var viewModel: ViewModel
-
-    // MARK: Initializers
 
     init(wordValue: WordValue = .init()) {
         let viewModel: ViewModel = .init(
@@ -36,8 +30,6 @@ struct HandDetectorView: View {
         _viewModel = .init(wrappedValue: viewModel)
     }
 
-    // MARK: View
-
     var body: some View {
         CameraView()
             .overlay(overlayView, alignment: .top)
@@ -45,14 +37,5 @@ struct HandDetectorView: View {
             .onAppear {
                 viewModel.onAppear(handPoseDetector: handPoseDetector)
             }
-    }
-}
-
-// MARK: - Previews
-
-struct HandDetectorView_Previews: PreviewProvider {
-    static var previews: some View {
-        HandDetectorView(wordValue: .init(targetWords: ["ABC"]))
-            .setupPreview()
     }
 }

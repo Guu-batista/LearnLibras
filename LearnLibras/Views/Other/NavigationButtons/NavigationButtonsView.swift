@@ -11,8 +11,8 @@ enum NavigationButtonsView: View {
 
     case next(_ title: LocalizedStringKey = "NavigationButtonsView.next")
     case previus(_ title: LocalizedStringKey = "NavigationButtonsView.previus")
-    case both(nextTitle: LocalizedStringKey = "NavigationButtonsView.next",
-              previusTitle: LocalizedStringKey = "NavigationButtonsView.previus")
+    case both(nextTitle: LocalizedStringKey = "Começar a aprender",
+              previusTitle: LocalizedStringKey = "Voltar")
 
 
     var body: some View {

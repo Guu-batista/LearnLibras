@@ -7,11 +7,7 @@
 
 import Foundation
 
-// MARK: - CameraView Publics
-
 extension CameraView {
-
-    // MARK: Properties
 
     var status: Status {
         .init(cameraSetupStatus: cameraManager.setupStatus,
@@ -23,8 +19,6 @@ extension CameraView {
         status == .stopped || status == .running || status == .notStarted
     }
 
-    // MARK: Functions
-
     @Sendable @MainActor func onAppear() async {
         await cameraManager.setupCamera()
         guard cameraManager.setupStatus == .success else { return }
@@ -35,15 +29,8 @@ extension CameraView {
         await cameraManager.startCapture()
     }
 
-    // MARK: Enums
-
     enum Status: CaseIterable {
-
-        // MARK: Cases
-
         case accessDenied, loading, failed, running, stopped, notStarted
-
-        // MARK: Initializers
 
         init(cameraSetupStatus: CameraManager.SetupStatus,
              handPoseStatus: HandPoseDetector.SetupStatus,

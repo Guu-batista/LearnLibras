@@ -110,7 +110,6 @@ private extension CameraManager {
         captureOutput.connection(with: .video)?.isEnabled = true
         captureOutput.alwaysDiscardsLateVideoFrames = true
 
-        // Desative o espelhamento para a câmera do MacBook
         captureOutput.connection(with: .video)?.isVideoMirrored = false
 
         captureSession.addOutput(captureOutput)
@@ -120,19 +119,18 @@ private extension CameraManager {
     }
 
     func setupInputs() async -> Bool {
-        // Configuração para a única câmera disponível no MacBook (geralmente frontal)
         async let macCameraInput: AVCaptureDeviceInput? = await Task.detached {
             guard let camera: AVCaptureDevice = .default(
                 .builtInWideAngleCamera,
                 for: .video,
-                position: .unspecified // Pode usar .front se quiser ser mais específico
+                position: .unspecified
             ) else { return nil }
 
             return try? .init(device: camera)
         }.value
 
         if let macCameraInput = await macCameraInput {
-            currentCamera = .front // Apenas uma câmera frontal está disponível
+            currentCamera = .front
             captureSession.addInput(macCameraInput)
             return true
         }
