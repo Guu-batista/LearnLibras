@@ -44,7 +44,7 @@ struct MainView: View {
                 navigationManager.page
             } else {
                 Text("Aumente o tamanho da tela para rodar o LearnLibras")
-                    .font(.custom.body)
+                    .font(.title2)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .padding()

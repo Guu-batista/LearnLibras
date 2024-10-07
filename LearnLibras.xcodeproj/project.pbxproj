@@ -16,19 +16,18 @@
 		9E6E00AD2C98CE9C009A56C4 /* ASLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00AC2C98CE9C009A56C4 /* ASLModel.swift */; };
 		9E6E00AF2C98CEAB009A56C4 /* HandPoseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00AE2C98CEAB009A56C4 /* HandPoseResult.swift */; };
 		9E6E00B12C98CEB2009A56C4 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00B02C98CEB2009A56C4 /* Page.swift */; };
-		9E6E00B42C98CF27009A56C4 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00B32C98CF27009A56C4 /* Font+Extension.swift */; };
 		9E6E00B62C98CF31009A56C4 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00B52C98CF31009A56C4 /* View+Extension.swift */; };
 		9E6E00BE2C98CFE0009A56C4 /* ASLModel.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = 9E6E00BD2C98CFE0009A56C4 /* ASLModel.mlmodelc */; };
 		9E6E00C42C98D2A3009A56C4 /* AnimatedGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00C32C98D2A3009A56C4 /* AnimatedGradient.swift */; };
 		9E6E00CF2C992935009A56C4 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00CE2C992935009A56C4 /* CameraView.swift */; };
-		9E6E00D12C992945009A56C4 /* CameraView+Publics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00D02C992945009A56C4 /* CameraView+Publics.swift */; };
-		9E6E00D32C992960009A56C4 /* CameraView+AVCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00D22C992960009A56C4 /* CameraView+AVCaptureView.swift */; };
+		9E6E00D12C992945009A56C4 /* CameraViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00D02C992945009A56C4 /* CameraViewStatus.swift */; };
+		9E6E00D32C992960009A56C4 /* AVCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00D22C992960009A56C4 /* AVCaptureView.swift */; };
 		9E6E00D72C992D3E009A56C4 /* HandDetectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00D62C992D3E009A56C4 /* HandDetectorView.swift */; };
-		9E6E00D92C992D4B009A56C4 /* HandDetectorView+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00D82C992D4B009A56C4 /* HandDetectorView+UI.swift */; };
-		9E6E00DD2C992D7D009A56C4 /* HandDetectorView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00DC2C992D7D009A56C4 /* HandDetectorView+ViewModel.swift */; };
-		9E6E00DF2C992D96009A56C4 /* HandDetectorView+WordValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00DE2C992D96009A56C4 /* HandDetectorView+WordValue.swift */; };
+		9E6E00D92C992D4B009A56C4 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00D82C992D4B009A56C4 /* OverlayView.swift */; };
+		9E6E00DD2C992D7D009A56C4 /* HandDetectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00DC2C992D7D009A56C4 /* HandDetectorViewModel.swift */; };
+		9E6E00DF2C992D96009A56C4 /* WordValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00DE2C992D96009A56C4 /* WordValue.swift */; };
 		9E6E00E12C992E0B009A56C4 /* NavigationButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00E02C992E0B009A56C4 /* NavigationButtonsView.swift */; };
-		9E6E00E32C992E1C009A56C4 /* NavigationButtonsView+Publics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00E22C992E1C009A56C4 /* NavigationButtonsView+Publics.swift */; };
+		9E6E00E32C992E1C009A56C4 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00E22C992E1C009A56C4 /* ButtonView.swift */; };
 		9E6E00E52C992E27009A56C4 /* NavigationLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00E42C992E27009A56C4 /* NavigationLabelStyle.swift */; };
 		9E6E00F52C992EFE009A56C4 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00F42C992EFE009A56C4 /* IntroView.swift */; };
 		9E6E00FD2C992F2A009A56C4 /* TryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E00FC2C992F2A009A56C4 /* TryView.swift */; };
@@ -47,19 +46,18 @@
 		9E6E00AC2C98CE9C009A56C4 /* ASLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASLModel.swift; sourceTree = "<group>"; };
 		9E6E00AE2C98CEAB009A56C4 /* HandPoseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandPoseResult.swift; sourceTree = "<group>"; };
 		9E6E00B02C98CEB2009A56C4 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
-		9E6E00B32C98CF27009A56C4 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		9E6E00B52C98CF31009A56C4 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		9E6E00BD2C98CFE0009A56C4 /* ASLModel.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ASLModel.mlmodelc; sourceTree = "<group>"; };
 		9E6E00C32C98D2A3009A56C4 /* AnimatedGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedGradient.swift; sourceTree = "<group>"; };
 		9E6E00CE2C992935009A56C4 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		9E6E00D02C992945009A56C4 /* CameraView+Publics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraView+Publics.swift"; sourceTree = "<group>"; };
-		9E6E00D22C992960009A56C4 /* CameraView+AVCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraView+AVCaptureView.swift"; sourceTree = "<group>"; };
+		9E6E00D02C992945009A56C4 /* CameraViewStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewStatus.swift; sourceTree = "<group>"; };
+		9E6E00D22C992960009A56C4 /* AVCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureView.swift; sourceTree = "<group>"; };
 		9E6E00D62C992D3E009A56C4 /* HandDetectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandDetectorView.swift; sourceTree = "<group>"; };
-		9E6E00D82C992D4B009A56C4 /* HandDetectorView+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandDetectorView+UI.swift"; sourceTree = "<group>"; };
-		9E6E00DC2C992D7D009A56C4 /* HandDetectorView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandDetectorView+ViewModel.swift"; sourceTree = "<group>"; };
-		9E6E00DE2C992D96009A56C4 /* HandDetectorView+WordValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandDetectorView+WordValue.swift"; sourceTree = "<group>"; };
+		9E6E00D82C992D4B009A56C4 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		9E6E00DC2C992D7D009A56C4 /* HandDetectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandDetectorViewModel.swift; sourceTree = "<group>"; };
+		9E6E00DE2C992D96009A56C4 /* WordValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordValue.swift; sourceTree = "<group>"; };
 		9E6E00E02C992E0B009A56C4 /* NavigationButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonsView.swift; sourceTree = "<group>"; };
-		9E6E00E22C992E1C009A56C4 /* NavigationButtonsView+Publics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButtonsView+Publics.swift"; sourceTree = "<group>"; };
+		9E6E00E22C992E1C009A56C4 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		9E6E00E42C992E27009A56C4 /* NavigationLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLabelStyle.swift; sourceTree = "<group>"; };
 		9E6E00F42C992EFE009A56C4 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		9E6E00FC2C992F2A009A56C4 /* TryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryView.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 		9E6E00B22C98CF16009A56C4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9E6E00B32C98CF27009A56C4 /* Font+Extension.swift */,
 				9E6E00B52C98CF31009A56C4 /* View+Extension.swift */,
 			);
 			path = Extensions;
@@ -172,8 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				9E6E00CE2C992935009A56C4 /* CameraView.swift */,
-				9E6E00D22C992960009A56C4 /* CameraView+AVCaptureView.swift */,
-				9E6E00D02C992945009A56C4 /* CameraView+Publics.swift */,
+				9E6E00D22C992960009A56C4 /* AVCaptureView.swift */,
+				9E6E00D02C992945009A56C4 /* CameraViewStatus.swift */,
 			);
 			path = CameraView;
 			sourceTree = "<group>";
@@ -182,9 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				9E6E00D62C992D3E009A56C4 /* HandDetectorView.swift */,
-				9E6E00D82C992D4B009A56C4 /* HandDetectorView+UI.swift */,
-				9E6E00DC2C992D7D009A56C4 /* HandDetectorView+ViewModel.swift */,
-				9E6E00DE2C992D96009A56C4 /* HandDetectorView+WordValue.swift */,
+				9E6E00D82C992D4B009A56C4 /* OverlayView.swift */,
+				9E6E00DC2C992D7D009A56C4 /* HandDetectorViewModel.swift */,
+				9E6E00DE2C992D96009A56C4 /* WordValue.swift */,
 			);
 			path = HandDetectorView;
 			sourceTree = "<group>";
@@ -193,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				9E6E00E02C992E0B009A56C4 /* NavigationButtonsView.swift */,
-				9E6E00E22C992E1C009A56C4 /* NavigationButtonsView+Publics.swift */,
+				9E6E00E22C992E1C009A56C4 /* ButtonView.swift */,
 				9E6E00E42C992E27009A56C4 /* NavigationLabelStyle.swift */,
 			);
 			path = NavigationButtons;
@@ -305,23 +302,22 @@
 			files = (
 				9E6E00AF2C98CEAB009A56C4 /* HandPoseResult.swift in Sources */,
 				9E6E00C42C98D2A3009A56C4 /* AnimatedGradient.swift in Sources */,
-				9E6E00DF2C992D96009A56C4 /* HandDetectorView+WordValue.swift in Sources */,
+				9E6E00DF2C992D96009A56C4 /* WordValue.swift in Sources */,
 				9E6E00CF2C992935009A56C4 /* CameraView.swift in Sources */,
 				9E6E00932C98CC3F009A56C4 /* LearnLibrasApp.swift in Sources */,
-				9E6E00E32C992E1C009A56C4 /* NavigationButtonsView+Publics.swift in Sources */,
+				9E6E00E32C992E1C009A56C4 /* ButtonView.swift in Sources */,
 				9E6E00B62C98CF31009A56C4 /* View+Extension.swift in Sources */,
 				9E6E00B12C98CEB2009A56C4 /* Page.swift in Sources */,
-				9E6E00D12C992945009A56C4 /* CameraView+Publics.swift in Sources */,
+				9E6E00D12C992945009A56C4 /* CameraViewStatus.swift in Sources */,
 				9E6E00A32C98CE08009A56C4 /* MainView.swift in Sources */,
 				9E6E00E52C992E27009A56C4 /* NavigationLabelStyle.swift in Sources */,
-				9E6E00D32C992960009A56C4 /* CameraView+AVCaptureView.swift in Sources */,
+				9E6E00D32C992960009A56C4 /* AVCaptureView.swift in Sources */,
 				9E6E00A82C98CE4D009A56C4 /* CameraManager.swift in Sources */,
-				9E6E00D92C992D4B009A56C4 /* HandDetectorView+UI.swift in Sources */,
-				9E6E00B42C98CF27009A56C4 /* Font+Extension.swift in Sources */,
+				9E6E00D92C992D4B009A56C4 /* OverlayView.swift in Sources */,
 				9E6E00FD2C992F2A009A56C4 /* TryView.swift in Sources */,
 				9E6FD82C2CA73D7400B72B0E /* LibrasView.swift in Sources */,
 				9E6E00E12C992E0B009A56C4 /* NavigationButtonsView.swift in Sources */,
-				9E6E00DD2C992D7D009A56C4 /* HandDetectorView+ViewModel.swift in Sources */,
+				9E6E00DD2C992D7D009A56C4 /* HandDetectorViewModel.swift in Sources */,
 				9E6E00F52C992EFE009A56C4 /* IntroView.swift in Sources */,
 				9E6E00A62C98CE42009A56C4 /* NavigationManager.swift in Sources */,
 				9E6E00AD2C98CE9C009A56C4 /* ASLModel.swift in Sources */,

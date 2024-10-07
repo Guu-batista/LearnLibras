@@ -9,15 +9,15 @@ import SwiftUI
 
 enum NavigationButtonsView: View {
 
-    case next(_ title: LocalizedStringKey = "NavigationButtonsView.next")
-    case previus(_ title: LocalizedStringKey = "NavigationButtonsView.previus")
+    case next(_ title: LocalizedStringKey = "")
+    case previus(_ title: LocalizedStringKey = "")
     case both(nextTitle: LocalizedStringKey = "Começar a aprender",
               previusTitle: LocalizedStringKey = "Voltar")
 
 
     var body: some View {
         bodyView
-            .tint(.white)
+            .tint(.black)
     }
 
     @ViewBuilder var bodyView: some View {

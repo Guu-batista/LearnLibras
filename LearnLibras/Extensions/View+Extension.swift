@@ -36,14 +36,4 @@ extension View {
             .opacity(isAnimated ? 1 : 0)
             .animation(animation, value: isAnimated)
     }
-
-    @MainActor func setupPreview() -> some View {
-        self
-            .preferredColorScheme(.dark)
-            .previewInterfaceOrientation(.landscapeRight)
-            .previewDevice("iPad Pro (11-inch) (4th generation)")
-            .environmentObject(NavigationManager())
-            .environmentObject(CameraManager())
-            .environmentObject(HandPoseDetector())
-    }
 }

@@ -12,12 +12,9 @@ extension HandDetectorView {
     var overlayView: some View {
         HStack {
             Spacer()
-
             ZStack {
                 charactersView
                     .opacity(viewModel.isCompleted ? 0 : 1)
-
-              
             }
 
             Spacer()
@@ -43,7 +40,7 @@ extension HandDetectorView {
         HStack {
             ForEach(Array(letters.enumerated()), id: \.offset) { (_, character) in
                 Text(verbatim: character.letter)
-                    .font(.custom.letter)
+                    .font(.system(size: 75).weight(.medium))
                     .opacity(character.isCompleted ? 1 : 0.5)
             }
         }
@@ -53,7 +50,7 @@ extension HandDetectorView {
         HStack {
             Spacer()
             Text(verbatim: letters)
-                .font(.custom.letter)
+                .font(.system(size: 75).weight(.medium))
                 .frame(maxWidth: .infinity)
 
         }

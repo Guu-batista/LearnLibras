@@ -13,7 +13,7 @@ struct NavigationLabelStyle: LabelStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         contentView(configuration: configuration)
-            .font(.custom.title2)
+            .font(.title)
             .padding()
     }
 

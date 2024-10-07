@@ -26,7 +26,8 @@ struct TryView: View {
             VStack {
                 Spacer()
                 Text("LearnLibras")
-                    .font(.custom.pageTitle)
+                    .foregroundColor(.black)
+                    .font(.system(size: 50, weight: .bold))
                     .moveEffect(
                         animation: defaultAnimation,
                         isAnimated: isAnimated
@@ -41,8 +42,9 @@ struct TryView: View {
                                 )
                                 VStack {
                                     Text("Escolha uma letra para aprender!")
+                                        .foregroundColor(.black)
                                         .frame(maxWidth: .infinity)
-                                        .font(.custom.body)
+                                        .font(.title2)
                                         .padding()
                                         .cornerRadius(10)
                                       
@@ -57,8 +59,7 @@ struct TryView: View {
                                                         Button(letter) {
                                                             selectedLetter = letter
                                                         }
-                                                        .font(.custom.letter)
-                                                        .foregroundColor(.white)
+                                                        .font(.system(size: 75).weight(.medium))
                                                         .matchedGeometryEffect(id: letter, in: namespace)
                                                         .padding()
                                                     }
@@ -92,7 +93,8 @@ struct TryView: View {
     func letterView(for letter: String) -> some View {
         VStack {
             Text(letter)
-                .font(.custom.letter)
+                .font(.system(size: 75).weight(.medium))
+                .foregroundColor(.black)
                 .matchedGeometryEffect(id: letter, in: namespace)
                 .frame(maxWidth: .infinity)
                 .background(alignment: .topLeading) {

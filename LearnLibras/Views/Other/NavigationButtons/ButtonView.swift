@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-extension NavigationButtonsView {}
-
-
 extension NavigationButtonsView {
     struct ButtonView: View {
 
